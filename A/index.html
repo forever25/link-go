@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <script src="./js/jquery-3.2.1.js"></script>
+  <script src="./js/base.js"></script>
+  <style>
+    .button-warp {
+      display: grid;
+      grid-template-columns: 120px;
+      row-gap: 20px;
+    }
+
+    .button-warp a {
+      display: block;
+    }
+
+    .button-warp a .button {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 主页按钮包 -->
+  <div class="button-warp page-center">
+    <a onclick="dialogShow()">
+      <button type="button" class="button"> Game rule</button>
+    </a>
+    <a href="./Level_Selection_Page.html">
+      <button type="button" class="button"> new Game</button>
+    </a>
+    <a onclick="loadGame()">
+      <button type="button" class="button"> Load Game </button>
+    </a>
+    <a href="./Ranking_Page.html">
+      <button type="button" class="button"> Ranking </button>
+    </a>
+  </div>
+  <div class="dialog page-center">
+    <div class="dialog-header">
+      <div class="dialog-title">Game rule</div>
+      <div class="dialog-close">X </div>
+    </div>
+    <div class="dialog-body">
+      <p>
+        1. Users use the Road Paver to draw the road that citizens can walk on.
+      </p>
+      <p>
+        2. When a citizen enters a wrong destination, if the player places a rebirth gate, the citizen will reborn at
+        the
+        rebirth gate and walk along the road connected(Only once). When the citizen go back to the rebirth gate for some
+        reason, they can not enter the rebirth gate and turn around and continue to walk along the road.
+      </p>
+      <p>
+        3. The rebirth gate can only be placed on the road and must be at one end of the road. It can connect roads in
+        any
+        direction, but it can only connect roads in one direction at the same time.
+      </p>
+      <p>
+        4. Navigator can only be placed on intersection/junction. When citizen enter the navigator, they will continue
+        to
+        walk towards the branch which can lead to the destination. If there is no road leading to the desired
+        destination,
+        they will randomly choose a direction(Except for turn around) and continue to walk;
+      </p>
+      <p>
+        5. When players use Remove tool, the tool placed above the road will be removed first, and then the road will be
+        removed when clicking again.
+      </p>
+    </div>
+  </div>
+  <form class="hide">
+    <input type="file">
+  </form>
+</body>
+
+</html>
