@@ -1,0 +1,12 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ea8068;
+}
+
+.new-game {
+  width: 400px;
+  height: 200px;
+}
