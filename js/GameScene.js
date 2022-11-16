@@ -1,8 +1,16 @@
 class GameScene {
+  level_map = [
+    {
+      width: '200px',
+      height: '200px',
+      col:10,
+      row:20,
+      size:40
+    }
+  ]
   constructor(options = {
     width: '200px',
-    height: '200px',
-    fps: 30,
+    height: '200px'
   }) {
     this.objectList = [];
     this.width = '200px'

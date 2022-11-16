@@ -23,6 +23,10 @@ label {
   margin: 8px 4px;
 }
 
+
+ul {
+  list-style: none;
+}
 .hide {
   display: none;
 }

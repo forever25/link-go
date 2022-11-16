@@ -5,8 +5,9 @@
     name: 'DBconfig', // 存储到localStorage 的字段名称
     defaultData: {
       userInfo: {
-        userName: '测试'
+        nickname: '测试'
       },
+      level: 0, // 0 简单 1 一般 2 困难 
       roadList: [],
       rankList: [
         {
@@ -77,7 +78,7 @@
       DBCallBackList.forEach(it => {
         it(DB)
       })
-    }, 200)
+    }, 50)
   }
 
   // 挂载到windows上,用于操作回调

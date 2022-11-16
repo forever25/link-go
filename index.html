@@ -84,17 +84,17 @@
       <div class="dialog-close">X </div>
     </div>
     <div class="dialog-body">
-      <form>
+      <form onsubmit="return toPage('/Level_Selection_Page.html')">
         <div>
           <p>
             <label>Nick Name</label>
           </p>
           <p>
-            <input type="text" id="nickname" placeholder="Your nickname">
+            <input type="text" id="nickname" placeholder="Your nickname" required>
           </p>
         </div>
         <div>
-          <button type="button" class="button"> submit </button>
+          <button type="submit"  class="button"> submit </button>
         </div>
       </form>
     </div>

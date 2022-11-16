@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/base.css">
+  <script src="./js/jquery-3.2.1.js"></script>
+  <script src="./js/BaseDB.js"></script>
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    html,
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #ea8068;
+    }
+
+    .level li {
+      margin: 10px 0;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <h1></h1>
+  <ul class="level page-center">
+    <li>
+      <button data-index="0" class="button">Easy</button>
+    </li>
+    <li>
+      <button data-index="1" class="button">Normal</button>
+    </li>
+    <li>
+      <button data-index="2" class="button">Hard</button>
+    </li>
+
+  </ul>
+  <script>
+    $('h1').text(DB.userInfo.nickname)
+
+    $('.level').on('click', (e) => {
+      const level = Number(e.target.dataset.index)
+      if (!Number.isNaN(level)) {
+        DB.level = level;
+        setTimeout(() => {
+          window.location.href = '/Game_Page.html'
+        }, 60)
+      }
+    })
+  </script>
 </body>
+
 </html>
